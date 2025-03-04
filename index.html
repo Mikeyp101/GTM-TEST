@@ -1,31 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Test Website</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        h1 { color: #333; }
-        p { font-size: 18px; }
-    </style>
-<!-- Google Tag Manager -->
+    <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-NM8BC5PH');</script>
 <!-- End Google Tag Manager -->
-    
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GTM Test Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        button, a {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        form {
+            margin-top: 30px;
+        }
+        input, textarea {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+        }
+        .long-content {
+            height: 1500px;
+            background: linear-gradient(to bottom, white, lightgray);
+            margin-top: 30px;
+            padding: 20px;
+        }
+    </style>
 </head>
-<body>
+<body
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NM8BC5PH"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-    <h1>Welcome to My Test Site</h1>
-    <p>This is a simple GitHub Pages website.</p>
-    <p>I'll be using this to test tracking and analytics later.</p>
+    <div class="container">
+        <h1>Welcome to My GTM Test Site</h1>
+        <p>Use this site to test Google Tag Manager tracking.</p>
+        
+        <!-- Button Click Tracking -->
+        <button class="track-button" id="btn-1">Click Me 1</button>
+        <button class="track-button" id="btn-2">Click Me 2</button>
+        
+        <!-- Outbound Links -->
+        <a href="https://www.google.com" target="_blank" class="outbound-link">Go to Google</a>
+        <a href="https://www.youtube.com" target="_blank" class="outbound-link">Go to YouTube</a>
+        
+        <!-- Form Submission -->
+        <form id="test-form">
+            <input type="text" placeholder="Enter your name" required>
+            <input type="email" placeholder="Enter your email" required>
+            <textarea placeholder="Your message here" required></textarea>
+            <button type="submit">Submit Form</button>
+        </form>
+        
+        <!-- Long Content for Scroll Tracking -->
+        <div class="long-content">
+            <h2>Scroll down to test scroll tracking</h2>
+            <p>Keep scrolling... Track how far users scroll on this page.</p>
+        </div>
+    </div>
 </body>
 </html>
